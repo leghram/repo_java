@@ -22,4 +22,76 @@ CREATE TABLE VIAJES(
     foreign key (user_id) references USERS(id) 
 );
 
-INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('John', 'Doe', 'john.doe@example.com', 'secretpassword');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Jon', 'Doe', 'jon@example.com', '1234');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Jane', 'Smith', 'jane@example.com', '5678');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Michael', 'Johnson', 'michael@example.com', 'abcd');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Emily', 'Williams', 'emily@example.com', 'efgh');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('David', 'Brown', 'david@example.com', 'ijkl');
+
+
+
+-- Insertar más viajes para el usuario con ID 1 (Jon)
+INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES
+('Viaje 1 Jon', 'País 1', 4.5, 1, 'https://i.pinimg.com/1200x/a4/59/74/a4597487423d3fa30f98a55ca36df234.jpg', 1),
+('Viaje 2 Jon', 'País 2', 3.8, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-machu-picchu-peru.jpg', 1),
+('Viaje 3 Jon', 'País 3', 4.2, 1, 'https://i.insider.com/5d1270089c51010bb17c0536?width=1200&format=jpeg', 1),
+('Viaje 4 Jon', 'País 4', 4.0, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU', 1),
+('Viaje 5 Jon', 'País 5', 4.7, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGktGN_o-gNEoiJ9vFg1uWUxuVUb-gn2gTxQ&usqp=CAU', 1),
+('Viaje 6 Jon', 'País 6', 3.5, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGdQMPkQrPch8Hr-TpsDnrlX_Tpkw7Dj0bXVPV7Rc9cUWHLylSyKunMhQ-7kE_194IPM&usqp=CAU', 1),
+('Viaje 7 Jon', 'País 7', 4.8, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyuaRDjwUj3yrzdzobD4TlM-bxDC7iVU0SA&usqp=CAU', 1),
+('Viaje 8 Jon', 'País 8', 4.1, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-rome-italy.jpg', 1),
+('Viaje 9 Jon', 'País 9', 3.9, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7EeTUgoRWQ7ELawUuCMyqe1Wmq5F2C6hhvnI9A_zRl1oFeatMEyEGrjEpm63-bkQbyM&usqp=CAU', 1),
+('Viaje 10 Jon', 'País 10', 4.4, 0, 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-October-In-World-cover.jpg', 1);
+
+-- Insertar más viajes para el usuario con ID 2 (Alice)
+INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES
+('Viaje 1 Alice', 'País 1', 4.2, 1, 'https://i.pinimg.com/1200x/a4/59/74/a4597487423d3fa30f98a55ca36df234.jpg', 2),
+('Viaje 2 Alice', 'País 2', 3.7, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-machu-picchu-peru.jpg', 2),
+('Viaje 3 Alice', 'País 3', 4.0, 1, 'https://i.insider.com/5d1270089c51010bb17c0536?width=1200&format=jpeg', 2),
+('Viaje 4 Alice', 'País 4', 4.5, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU', 2),
+('Viaje 5 Alice', 'País 5', 4.6, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGktGN_o-gNEoiJ9vFg1uWUxuVUb-gn2gTxQ&usqp=CAU', 2),
+('Viaje 6 Alice', 'País 6', 3.9, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGdQMPkQrPch8Hr-TpsDnrlX_Tpkw7Dj0bXVPV7Rc9cUWHLylSyKunMhQ-7kE_194IPM&usqp=CAU', 2),
+('Viaje 7 Alice', 'País 7', 4.3, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyuaRDjwUj3yrzdzobD4TlM-bxDC7iVU0SA&usqp=CAU', 2),
+('Viaje 8 Alice', 'País 8', 4.2, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-rome-italy.jpg', 2),
+('Viaje 9 Alice', 'País 9', 4.1, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7EeTUgoRWQ7ELawUuCMyqe1Wmq5F2C6hhvnI9A_zRl1oFeatMEyEGrjEpm63-bkQbyM&usqp=CAU', 2),
+('Viaje 10 Alice', 'País 10', 4.7, 0, 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-October-In-World-cover.jpg', 2);
+
+-- Insertar más viajes para el usuario con ID 3 (Michael)
+INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES
+('Viaje 1 Michael', 'País 1', 4.0, 1, 'https://i.pinimg.com/1200x/a4/59/74/a4597487423d3fa30f98a55ca36df234.jpg', 3),
+('Viaje 2 Michael', 'País 2', 3.5, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-machu-picchu-peru.jpg', 3),
+('Viaje 3 Michael', 'País 3', 4.3, 1, 'https://i.insider.com/5d1270089c51010bb17c0536?width=1200&format=jpeg', 3),
+('Viaje 4 Michael', 'País 4', 4.1, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU', 3),
+('Viaje 5 Michael', 'País 5', 4.7, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGktGN_o-gNEoiJ9vFg1uWUxuVUb-gn2gTxQ&usqp=CAU', 3),
+('Viaje 6 Michael', 'País 6', 4.2, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGdQMPkQrPch8Hr-TpsDnrlX_Tpkw7Dj0bXVPV7Rc9cUWHLylSyKunMhQ-7kE_194IPM&usqp=CAU', 3),
+('Viaje 7 Michael', 'País 7', 4.4, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyuaRDjwUj3yrzdzobD4TlM-bxDC7iVU0SA&usqp=CAU', 3),
+('Viaje 8 Michael', 'País 8', 3.9, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-rome-italy.jpg', 3),
+('Viaje 9 Michael', 'País 9', 4.6, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7EeTUgoRWQ7ELawUuCMyqe1Wmq5F2C6hhvnI9A_zRl1oFeatMEyEGrjEpm63-bkQbyM&usqp=CAU', 3),
+('Viaje 10 Michael', 'País 10', 4.5, 0, 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-October-In-World-cover.jpg', 3);
+
+
+-- Insertar más viajes para el usuario con ID 4 (Emily)
+INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES
+('Viaje 1 Emily', 'País 1', 4.6, 1, 'https://i.pinimg.com/1200x/a4/59/74/a4597487423d3fa30f98a55ca36df234.jpg', 4),
+('Viaje 2 Emily', 'País 2', 4.3, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-machu-picchu-peru.jpg', 4),
+('Viaje 3 Emily', 'País 3', 3.9, 1, 'https://i.insider.com/5d1270089c51010bb17c0536?width=1200&format=jpeg', 4),
+('Viaje 4 Emily', 'País 4', 4.0, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU', 4),
+('Viaje 5 Emily', 'País 5', 4.2, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGktGN_o-gNEoiJ9vFg1uWUxuVUb-gn2gTxQ&usqp=CAU', 4),
+('Viaje 6 Emily', 'País 6', 3.8, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGdQMPkQrPch8Hr-TpsDnrlX_Tpkw7Dj0bXVPV7Rc9cUWHLylSyKunMhQ-7kE_194IPM&usqp=CAU', 4),
+('Viaje 7 Emily', 'País 7', 4.1, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyuaRDjwUj3yrzdzobD4TlM-bxDC7iVU0SA&usqp=CAU', 4),
+('Viaje 8 Emily', 'País 8', 4.5, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-rome-italy.jpg', 4),
+('Viaje 9 Emily', 'País 9', 4.4, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7EeTUgoRWQ7ELawUuCMyqe1Wmq5F2C6hhvnI9A_zRl1oFeatMEyEGrjEpm63-bkQbyM&usqp=CAU', 4),
+('Viaje 10 Emily', 'País 10', 4.7, 0, 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-October-In-World-cover.jpg', 4);
+
+-- Insertar más viajes para el usuario con ID 5 (William)
+INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES
+('Viaje 1 William', 'País 1', 4.4, 1, 'https://i.pinimg.com/1200x/a4/59/74/a4597487423d3fa30f98a55ca36df234.jpg', 5),
+('Viaje 2 William', 'País 2', 4.2, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-machu-picchu-peru.jpg', 5),
+('Viaje 3 William', 'País 3', 4.6, 1, 'https://i.insider.com/5d1270089c51010bb17c0536?width=1200&format=jpeg', 5),
+('Viaje 4 William', 'País 4', 3.9, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU', 5),
+('Viaje 5 William', 'País 5', 4.3, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGktGN_o-gNEoiJ9vFg1uWUxuVUb-gn2gTxQ&usqp=CAU', 5),
+('Viaje 6 William', 'País 6', 4.1, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGdQMPkQrPch8Hr-TpsDnrlX_Tpkw7Dj0bXVPV7Rc9cUWHLylSyKunMhQ-7kE_194IPM&usqp=CAU', 5),
+('Viaje 7 William', 'País 7', 4.5, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIyuaRDjwUj3yrzdzobD4TlM-bxDC7iVU0SA&usqp=CAU', 5),
+('Viaje 8 William', 'País 8', 4.0, 0, 'https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-rome-italy.jpg', 5),
+('Viaje 9 William', 'País 9', 4.7, 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7EeTUgoRWQ7ELawUuCMyqe1Wmq5F2C6hhvnI9A_zRl1oFeatMEyEGrjEpm63-bkQbyM&usqp=CAU', 5),
+('Viaje 10 William', 'País 10', 4.2, 0, 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Places-To-Visit-In-October-In-World-cover.jpg', 5);

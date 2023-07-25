@@ -1,9 +1,10 @@
+
 <div class="best-travel-box">
-    <img class="img-best-travel-box" src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/05/08123739/lake-como-1-1600x900.jpeg?tr=w-1920" alt="">
+    <img class="img-best-travel-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6Z5vyLQ7H9tIoFsnWwdoiQRDPc_E0GEVMA&usqp=CAU" alt="">
     <div class="info-best-travel">
-        <h2>Nombre lugar</h2>
+        <h2> <%= currentViaje.getNombre() %></h2>
         <div class="pais-value-best-travel">
-            <p>pais</p>
+            <p><%= currentViaje.getPais() %></p>
             <p>4.4</p>
         </div>
     </div>

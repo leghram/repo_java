@@ -1,7 +1,8 @@
+
 <div class="header-index">
   <div class="header-index-info">
-    <h1>Nombre y Apellido</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione.</p>
+    <h1><%= currentUser.getNombre() %>  <%= currentUser.getApellido() %> </h1>
+    <p>Usuario activo ahora.</p>
   </div>
   <div class="header-index-search">
     <input class="search-input-index" type="text" placeholder="search" />
