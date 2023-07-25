@@ -12,7 +12,7 @@
             <h2>Destinos</h2>
             <p><%=cantidadViajes %> destinos encontrados.</p>
         </div>
-        <button class="btn-agregar-destino">Agregar nuevo</button>
+        <a href="nuevo_destino.jsp" class="btn-agregar-destino">Agregar nuevo</a>
     </div>
     <div class="lista-destinos">
 

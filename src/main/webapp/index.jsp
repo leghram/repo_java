@@ -28,7 +28,7 @@
         <%@ include file="components/destinations-section.jsp" %>
       </div>
       <div class="content-info">
-        <h1>Home Dashboard Page</h1>
+        <h2>Filters</h2>
       </div>
     </div>
   </body>
