@@ -55,6 +55,28 @@ public class UserDAO {
         return user;
     }
 
+    public User getUserByUsername(String username) throws SQLException {
+        User user = null;
+
+        try (Connection connection = DatabaseConnector.getConnection();
+             PreparedStatement statement = connection.prepareStatement("SELECT * FROM USERS WHERE nombre = ?");
+        ) {
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                user = new User();
+                user.setId(resultSet.getInt("id"));
+                user.setNombre(resultSet.getString("nombre"));
+                user.setApellido(resultSet.getString("apellido"));
+                user.setCorreo(resultSet.getString("correo"));
+                user.setPassword(resultSet.getString("password"));
+            }
+        }
+
+        return user;
+    }
+
     public void createUser(User user) throws SQLException {
         try (Connection connection = DatabaseConnector.getConnection();
              PreparedStatement statement = connection.prepareStatement("INSERT INTO USERS (nombre, apellido, correo, password) VALUES (?, ?, ?, ?)")) {
