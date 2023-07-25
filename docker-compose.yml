@@ -1,0 +1,20 @@
+version: "3"
+services:
+  tomcat:
+    image: tomcat:10.1-jdk11-openjdk-slim
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src/main/webapp:/usr/local/tomcat/webapps/ROOT
+      - ./target/classes:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=databasename
+      - MYSQL_USER=user1
+      - MYSQL_PASSWORD=user1password
+    volumes:
+      - ./mysql-data:/var/lib/mysql

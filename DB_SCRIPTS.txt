@@ -1,0 +1,25 @@
+CREATE DATABASE journey_tracker;
+
+
+use journey_tracker;
+
+CREATE TABLE USERS(
+    id int auto_increment primary key,
+    nombre varchar(100),
+    apellido varchar(100),
+    correo varchar(200),
+    password varchar(200)
+);
+
+CREATE TABLE VIAJES(
+    id int auto_increment primary key,
+    nombre varchar(100),
+    pais varchar(100),
+    puntuacion decimal(2),
+    is_favorite int,
+    url_image varchar(1000),
+    user_id int,
+    foreign key (user_id) references USERS(id) 
+);
+
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('John', 'Doe', 'john.doe@example.com', 'secretpassword');
