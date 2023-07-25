@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnector {
-    private static final String URL = "jdbc:mysql://mysql:3306/databasename?useSSL=true";
-    private static final String USERNAME = "user1";
-    private static final String PASSWORD = "user1password";
+    private static final String URL = "jdbc:mysql://mysql:3306/journey_tracker?useSSL=true";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "rootpassword";
 
     public static Connection getConnection() throws SQLException {
         try {
