@@ -27,22 +27,14 @@ public class LoginServlet extends HttpServlet {
         UserDAO userDAO = new UserDAO();
         try {
             User user = userDAO.getUserByUsername(username);
-
             if (user != null && user.getPassword().equals(password)) {
-                // El usuario existe y la contraseña es correcta
-                // Agregar el usuario a la sesión
                 request.getSession().setAttribute("user", user);
-
-                // Redireccionar a la página de inicio
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
             } else {
-                // El usuario no existe o la contraseña es incorrecta
-                // Redireccionar de nuevo a la página de inicio de sesión con un mensaje de error
                 request.setAttribute("error", "Usuario o contraseña incorrectos");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
         } catch (SQLException e) {
-            // Manejar la excepción en caso de un problema con la base de datos
             e.printStackTrace();
             request.setAttribute("error", "Error en la base de datos");
             request.getRequestDispatcher("/login.jsp").forward(request, response);

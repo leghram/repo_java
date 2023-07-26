@@ -23,10 +23,10 @@ CREATE TABLE VIAJES(
 );
 
 INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Jon', 'Doe', 'jon@example.com', '1234');
-INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Alice', 'Smith', 'jane@example.com', '5678');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Jane', 'Smith', 'jane@example.com', '5678');
 INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Michael', 'Johnson', 'michael@example.com', 'abcd');
 INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('Emily', 'Williams', 'emily@example.com', 'efgh');
-INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('William', 'Brown', 'david@example.com', 'ijkl');
+INSERT INTO USERS (nombre, apellido, correo, password) VALUES ('David', 'Brown', 'david@example.com', 'ijkl');
 
 
 

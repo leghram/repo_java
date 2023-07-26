@@ -2,12 +2,12 @@
   <div class="logo-space">
     <img
       class="logo-space"
-      src="https://cdn.dribbble.com/users/1331/screenshots/2932603/flip.gif"
+      src="https://vectips.com/wp-content/uploads/2014/03/logoinsp1.jpg"
       alt="logo"
     />
   </div>
   <%@ include file="navigation.jsp" %>
   <div class="logout-header">
-    <a href="LogoutServlet" class="btn-logout">LOG OUT</a>
+    <button class="btn-logout">LOG OUT</button>
   </div>
 </header>

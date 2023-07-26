@@ -15,11 +15,8 @@
   </head>
   <body>
   <%
-    User user = (User) request.getSession().getAttribute("user");
-    
-
     UserDAO userDAO = new UserDAO();
-    int userId = user.getId();
+    int userId = 2;
     User currentUser = userDAO.getUserById(userId);
   %>
 
@@ -31,7 +28,7 @@
         <%@ include file="components/destinations-section.jsp" %>
       </div>
       <div class="content-info">
-        <h2>...</h2>
+        <h2>Filters</h2>
       </div>
     </div>
   </body>

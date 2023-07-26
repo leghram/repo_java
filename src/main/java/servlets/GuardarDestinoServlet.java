@@ -25,25 +25,26 @@ public class GuardarDestinoServlet extends HttpServlet {
         double puntuacion = Double.parseDouble(request.getParameter("puntuacion"));
         int isFavorite = request.getParameter("is_favorite") != null ? 1 : 0;
         String urlImage = request.getParameter("url_image");
+        int idCurrentUser = Integer.parseInt(request.getParameter("id_current_user"));
 
-        // Conexión a la base de datos utilizando el objeto Connection existente
         Connection connection = null;
         try {
             connection = DatabaseConnector.getConnection();
         } catch (SQLException e) {
-            e.printStackTrace(); // Imprimir información detallada del error en la consola
+            e.printStackTrace(); 
             throw new ServletException("Error al guardar el destino en la base de datos", e);
         }
 
         try {
             // Query para insertar el nuevo destino en la tabla VIAJES
-            String insertQuery = "INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image) VALUES (?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO VIAJES (nombre, pais, puntuacion, is_favorite, url_image, user_id) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
             preparedStatement.setString(1, nombre);
             preparedStatement.setString(2, pais);
             preparedStatement.setDouble(3, puntuacion);
             preparedStatement.setInt(4, isFavorite);
             preparedStatement.setString(5, urlImage);
+            preparedStatement.setInt(6, idCurrentUser);
 
             // Ejecutar la inserción
             preparedStatement.executeUpdate();

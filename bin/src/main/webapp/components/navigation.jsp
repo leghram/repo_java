@@ -24,6 +24,8 @@
     <nav>
       <ul class="menu-items-data">
         <a href="index.jsp" class="item-menu <%=indexUrl%>">Dashboard</a>
+        <a href="tickets.jsp" class="item-menu <%=ticketsUrl%>">Tickets</a>
         <a href="favoritos.jsp" class="item-menu <%=favoritosUrl%>">Favoritos</a>
+        <a href="settings.jsp" class="item-menu <%=settingsUrl%>">Settings</a>
       </ul>
     </nav>

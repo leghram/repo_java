@@ -1,0 +1,71 @@
+
+
+#id_current_user{
+    display: none;
+}
+
+
+h1{
+    text-align: center;
+    margin: 50px 0px;
+}
+
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.form-container form{
+    width: 30%;
+    height: 600px;
+}
+
+
+.formulario-agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+.form-container div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container button{
+    background-color:rgb(30, 194, 139, 0.95);
+	border-radius:28px;
+	border:1px solid rgb(30, 194, 139, 0.95);
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px rgb(30, 194, 139, 0.95);
+
+}
+
+label{
+    font-size: 18px;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 12px;
+    box-shadow: -3px 0px 10px rgba(66,66,66,.18);
+    text-shadow: 0px 0px 1px rgba(66,66,66,.0);
+  }
+input:focus {
+    outline:none;
+  }
+  

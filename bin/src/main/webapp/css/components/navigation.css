@@ -83,14 +83,14 @@ nav {
   padding: 0px 30px 30px;
 }
 
-.btn-logout {
+.logout-header > button {
   width: 100%;
   font-size: 1.5rem;
   padding: 15px 20px;
   border-radius: 15px;
   font-weight: bold;
-  color: white;
+  background-color: white;
+  color: rgb(115, 132, 140);
   border: none;
-  text-align: center;
-  background-color: rgb(226, 120, 120);
+  text-align: left;
 }
